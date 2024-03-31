@@ -3,10 +3,12 @@
 		
 		<!-- 个人中心，反馈 -->
 		<view class="userInfo">
-			<image src="../../static/svg/userCenter.svg" class="icon"></image>
-			<view style="font-size: 16rpx;">个人中心</view>
-			<image src="../../static/svg/callBack.svg" class="icon"></image>
-			<view style="font-size: 16rpx;">反馈</view>
+			
+			<image src="../../static/svg/userCenter.svg" class="icon" @click="toUserInfo"></image>
+			<view style="font-size: 16rpx;"  @click="toUserInfo">个人中心</view>
+			
+			<image src="../../static/svg/callBack.svg" class="icon" @click="toRoutine"></image>
+			<view style="font-size: 16rpx;" @click="toRoutine">推荐路线</view>
 		</view>
 		
 		<!-- 地图 -->
@@ -74,6 +76,16 @@
 		methods: {
 			confirm() {
 
+			},
+			toUserInfo(){
+				uni.navigateTo({
+					url:"/pages/userInfo/userInfo"
+				})
+			},
+			toRoutine(){
+				uni.navigateTo({
+					url:"/pages/routine/routine"
+				})
 			},
 			popUp() {
 				this.pop = !this.pop;
