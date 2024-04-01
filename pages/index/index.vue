@@ -75,10 +75,10 @@
 							</view>
 
 							<view>
-								￥13
+								{{val.price}}
 							</view>
 							<view>
-								特色菜
+								{{val.label}}
 							</view>
 							<view style="background-color: #68c5fe;border-radius: 6rpx;">
 								<view class="font_2">连锁</view>
@@ -86,7 +86,7 @@
 						</view>
 						<view class="time">
 							<image src="../../static/svg/time.svg"></image>
-							<view>10:00-22:00</view>
+							<view>{{val.time}}</view>
 						</view>
 
 					</view>
@@ -105,40 +105,64 @@
 				rotate_fold: false,
 				pop: false,
 				fold: false,
-				showResult:false,
+				showResult: false,
 				text: "",
 				tabledata: [{
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					},
 					{
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
 					}, {
 						title: "烤鸭饭",
-						content: "学一食堂"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂"
-					}
+						content: "学一食堂",
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},
 				]
 			}
 		},
@@ -162,11 +186,11 @@
 				})
 			},
 			input() {
-					this.pop = true;
-					this.rotate_pop = true;
-					this.fold = true;
-					this.rotate_fold = true;
-					this.showResult=true;
+				this.pop = true;
+				this.rotate_pop = true;
+				this.fold = true;
+				this.rotate_fold = true;
+				this.showResult = true;
 			},
 			cancelSearch() {},
 			popUp() {
@@ -207,11 +231,11 @@
 	.tail {
 		z-index: 1;
 		width: 100%;
-		height: 60%;
+		height: 1000rpx;
 		border-radius: 50rpx 50rpx 0 0;
 		box-shadow: 0px 0px 25rpx #c9c9c9;
 		position: fixed;
-		bottom: -40%;
+		bottom: -650rpx;
 		background-color: #fff;
 		display: flex;
 		flex-direction: column;
@@ -256,7 +280,7 @@
 	.button {
 		width: 100rpx;
 		height: 140rpx;
-		margin: 30rpx;
+		margin: 20rpx;
 		border-radius: 20rpx;
 		display: flex;
 		flex-direction: column;
@@ -314,17 +338,20 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-	.font_2{
+
+	.font_2 {
 		color: #015ec8;
 		margin: 3rpx;
 		font-size: 20rpx;
 	}
-	.time{
+
+	.time {
 		height: 30rpx;
 		display: flex;
 		align-items: center;
 	}
-	.time image{
+
+	.time image {
 		width: 30rpx;
 		height: 30rpx;
 	}
