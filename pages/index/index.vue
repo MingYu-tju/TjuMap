@@ -19,8 +19,8 @@
 
 			<!-- 搜索栏，拉起按钮 -->
 			<view class="header">
-				<uni-search-bar class="search" @confirm="confirm" @input="input" v-model="text" radius="25"
-					@cancel="cancelSearch"></uni-search-bar>
+				<uni-search-bar class="search" @confirm="confirm" @update:modelValue="input" v-model="text"
+					@clear="clear" radius="25" @cancel="cancelSearch"></uni-search-bar>
 				<image :class="'back '+ (this.rotate_pop?'after_r':'before_r')" src="../../static/svg/back_1.svg"
 					@click="popUp">
 				</image>
@@ -73,7 +73,6 @@
 								<image src="../../static/svg/star.svg" style="width: 20rpx;height: 20rpx;"
 									v-for="v in 5"></image>
 							</view>
-
 							<view>
 								{{val.price}}
 							</view>
@@ -171,28 +170,41 @@
 		},
 		methods: {
 			confirm() {
-
-			},
-			toUserInfo() {
-				uni.navigateTo({
-					url: "/pages/userInfo/userInfo",
-
-				})
-			},
-			toRoutine() {
-				uni.navigateTo({
-					url: "/pages/routine/routine",
-
-				})
-			},
-			input() {
 				this.pop = true;
 				this.rotate_pop = true;
 				this.fold = true;
 				this.rotate_fold = true;
 				this.showResult = true;
 			},
-			cancelSearch() {},
+			toUserInfo() {
+				uni.navigateTo({
+					url: "/pages/userInfo/userInfo",
+					animationType: 'slide-in-right',
+					animationDuration: 500
+				})
+			},
+			toRoutine() {
+				uni.navigateTo({
+					url: "/pages/routine/routine",
+					animationType: 'slide-in-right',
+					animationDuration: 500
+				})
+			},
+			input() {
+
+			},
+			clear() {
+				this.fold = false;
+				this.pop= false;
+				this.rotate_fold = false;
+				this.showResult = false;
+			},
+			cancelSearch() {
+				this.fold = false;
+				this.pop= false;
+				this.rotate_fold = false;
+				this.showResult = false;
+			},
 			popUp() {
 				this.pop = !this.pop;
 				this.rotate_pop = !this.rotate_pop;
