@@ -25,7 +25,7 @@
 				<view class="font">设置</view>
 				<image src="../../static/svg/back_1.svg"></image>
 			</view>
-			<view class="item" @click="toFuc(5)">
+			<view class="item" @click="toAboutus">
 				<view class="font">关于我们</view>
 				<image src="../../static/svg/back_1.svg"></image>
 			</view>
@@ -43,6 +43,11 @@
 		methods: {
 			toFuc(v){
 				console.log(v);
+			},
+			toAboutus() {
+				uni.navigateTo({
+					url: "/pages/Aboutus/Aboutus",
+				})
 			}
 		},
 		mounted() {
