@@ -33,16 +33,24 @@
 			<!-- 存放button的容器 -->
 			<view :class="'main '+(this.fold?'after_fold':'before_fold')">
 				<view class="button">
-					<image src="../../static/logo.png" class="button_img"></image>
+					<image src="../../static/svg/food.svg" class="button_img"></image>
 					<view class="font">美食</view>
 				</view>
 				<view class="button">
-					<image src="../../static/logo.png" class="button_img"></image>
+					<image src="../../static/svg/route.svg" class="button_img"></image>
 					<view class="font">路线</view>
 				</view>
 				<view class="button">
+					<image src="../../static/svg/cat.svg" class="button_img"></image>
+					<view class="font">猫出没地</view>
+				</view>
+				<view class="button">
+					<image src="../../static/svg/duck.svg" class="button_img"></image>
+					<view class="font">鸭出没地</view>
+				</view>
+				<view class="button">
 					<image src="../../static/logo.png" class="button_img"></image>
-					<view class="font">猫猫</view>
+					<view class="font">建筑介绍</view>
 				</view>
 				<view class="button">
 					<image src="../../static/logo.png" class="button_img"></image>
@@ -50,15 +58,7 @@
 				</view>
 				<view class="button">
 					<image src="../../static/logo.png" class="button_img"></image>
-					<view class="font">美食</view>
-				</view>
-				<view class="button">
-					<image src="../../static/logo.png" class="button_img"></image>
-					<view class="font">美食</view>
-				</view>
-				<view class="button">
-					<image src="../../static/logo.png" class="button_img"></image>
-					<view class="font">美食</view>
+					<view class="font">语音导航</view>
 				</view>
 
 			</view>
@@ -71,7 +71,7 @@
 						<view class="comment">
 							<view>
 								<image src="../../static/svg/star.svg" style="width: 20rpx;height: 20rpx;"
-									v-for="v in 5"></image>
+									v-for="v in val.stars"></image>
 							</view>
 							<view>
 								{{val.price}}
@@ -109,59 +109,68 @@
 				tabledata: [{
 						title: "烤鸭饭",
 						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:3,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:2,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
+						price: "￥13",
+						label: "特色菜",
+						time: "10:00-22:00"
+					},{
+						title: "烤鸭饭",
+						content: "学一食堂",
+						stars:5,
 						price: "￥13",
 						label: "特色菜",
 						time: "10:00-22:00"
 					},
-					{
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					}, {
-						title: "烤鸭饭",
-						content: "学一食堂",
-						price: "￥13",
-						label: "特色菜",
-						time: "10:00-22:00"
-					},
+					
 				]
 			}
 		},
